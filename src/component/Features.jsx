@@ -83,11 +83,11 @@ const Features = ({ height }) => {
                   <img src="images/illustration-features-tab-2.svg" />
                 </div>
                 <div className="feature__info">
-                  <h3 className="feature__title">Bookmark in one click</h3>
+                  <h3 className="feature__title">Intelligent search</h3>
                   <p className="feature__desc">
-                    Organize your bookmarks however you like. Our simple
-                    drag-and-drop interface gives you complete control over how
-                    you manage your favourite sites.
+                    Our powerful search feature will help you find saved sites
+                    in no time at all. No need to trawl through all of your
+                    bookmarks.
                   </p>
                   <button className="feature__btn">More Info</button>
                 </div>
@@ -99,11 +99,11 @@ const Features = ({ height }) => {
                   <img src="images/illustration-features-tab-3.svg" />
                 </div>
                 <div className="feature__info">
-                  <h3 className="feature__title">Bookmark in one click</h3>
+                  <h3 className="feature__title">Share your bookmarks</h3>
                   <p className="feature__desc">
-                    Organize your bookmarks however you like. Our simple
-                    drag-and-drop interface gives you complete control over how
-                    you manage your favourite sites.
+                    Easily share your bookmarks and collections with others.
+                    Create a shareable link that you can send at the click of a
+                    button.
                   </p>
                   <button className="feature__btn">More Info</button>
                 </div>
