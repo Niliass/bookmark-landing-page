@@ -1,0 +1,57 @@
+@use "../abstracts" as *;
+
+footer {
+  background-color: $v-d-blue;
+  padding-block: 3rem;
+  @include media($md) {
+    padding-block: 2rem;
+  }
+  .svg__text {
+    fill: $white;
+  }
+  %flex {
+    @include flex(null, center, column, 40px);
+    @include media($md) {
+      flex-direction: row;
+    }
+  }
+  .container {
+    @extend %flex;
+    text-align: center;
+  }
+  .footer__container {
+    @extend %flex;
+    flex: 1;
+    @include media($md) {
+      justify-content: space-between;
+    }
+  }
+  .nav__footer {
+    @include flex(null, null, column, 30px);
+    @include media($md) {
+      flex-direction: row;
+    }
+    &__link {
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: clamp(0.85rem, 3vw, 1rem);
+      @include trans;
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+  .social__media {
+    display: flex;
+    gap: 35px;
+    &__link {
+      font-size: 1.3rem;
+      color: $white;
+      @include trans;
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+}

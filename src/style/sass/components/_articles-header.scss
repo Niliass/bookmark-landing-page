@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.article__info {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+}
+.article__title {
+  font-size: 1.3em;
+  @include media($md) {
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,195 @@
+@use "../abstracts" as *;
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+%btn-primary {
+  text-transform: uppercase;
+  padding-block: 0.8rem;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  @include trans;
+  &:hover {
+    background-color: transparent;
+  }
+  @include media($md) {
+    padding-block: 0.5rem;
+  }
+}
+.nav__btn,
+.nav__header__btn {
+  font-size: 1.2rem;
+  @include trans;
+  &:hover {
+    color: $soft-red;
+  }
+}
+.nav__btn {
+  color: $v-d-blue;
+  @include media($md) {
+    display: none;
+  }
+}
+.nav__header__btn {
+  color: $white;
+}
+
+.login__btn {
+  @extend %btn-primary;
+  font-size: 1.3rem;
+  color: hsl(0deg, 0%, 100%);
+  border-color: currentColor;
+  margin-top: 1.5rem;
+  padding-inline: 1.5rem;
+  letter-spacing: 3px;
+  &:hover {
+    color: $soft-red;
+  }
+  @include media($md) {
+    font-size: 0.8rem;
+    background-color: $soft-red;
+    border-color: $soft-red;
+    margin-top: 0;
+    @include shadow-btn;
+  }
+}
+.intro__btns {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  @include media($xl) {
+    justify-content: flex-start;
+  }
+}
+%intro__btn {
+  @extend %btn-primary;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  padding-inline: clamp(0.8rem, 2vw, 1.1rem);
+  padding-block: clamp(0.5rem, 2vw, 1rem);
+  @include shadow-btn;
+}
+.chrome__btn {
+  @extend %intro__btn;
+  color: $white;
+  border-color: $soft-blue;
+  background-color: $soft-blue;
+  &:hover {
+    color: $soft-blue;
+  }
+}
+.fire__btn {
+  @extend %intro__btn;
+  background-color: hsl(240deg 9% 98%);
+  border-color: transparent;
+  &:hover {
+    background-color: white;
+    border-color: $v-d-blue;
+  }
+}
+.features__btn {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  color: $grayish-blue;
+  font-size: 0.9em;
+  @include trans;
+  &:not(:last-child) {
+    border-bottom: 1px solid $grayish-blue;
+    @include media($md) {
+      border-bottom: none;
+    }
+  }
+  &:hover {
+    color: $soft-red;
+  }
+  &.active {
+    font-weight: 500;
+    color: $v-d-blue;
+  }
+  &::before {
+    content: "";
+    background-color: $soft-red;
+    position: absolute;
+    bottom: -1px;
+    z-index: 1;
+    width: 0;
+    height: 5px;
+    @include trans;
+  }
+  &.active::before {
+    width: 45%;
+    @include media($md) {
+      width: 100%;
+    }
+  }
+}
+.feature__btn {
+  display: none;
+  @extend %btn-primary;
+  padding: 0.5rem 1rem;
+  color: $white;
+  font-size: 0.9rem;
+  background-color: $soft-blue;
+  border-color: $soft-blue;
+  margin-top: 0.5rem;
+  &:hover {
+    color: $soft-blue;
+  }
+  @include media($md) {
+    display: block;
+  }
+}
+.extension__btn {
+  display: block;
+  @extend %btn-primary;
+  background-color: $soft-blue;
+  border-color: $soft-blue;
+  color: $white;
+  font-size: 0.8rem;
+  padding-inline: 1rem;
+  margin: 1rem auto;
+  &:hover {
+    color: $soft-blue;
+  }
+}
+.frequently__btn {
+  display: block;
+  @extend %btn-primary;
+  color: $white;
+  background-color: $soft-blue;
+  border-color: $soft-blue;
+  font-size: 0.8rem;
+  padding: 0.8rem;
+  margin: auto;
+  &:hover {
+    color: $soft-blue;
+  }
+}
+.question__btn {
+  @include flex(space-between, center, null, null);
+  text-align: center;
+  width: 100%;
+  padding-block: 25px;
+  &:hover h3 {
+    color: $soft-red;
+  }
+}
+
+.join__btn {
+  @extend %btn-primary;
+  color: $white;
+  border-color: $soft-red;
+  background-color: $soft-red;
+  font-size: 0.8rem;
+  padding-inline: 1rem;
+  &:hover {
+    background-color: $white;
+    color: $soft-red;
+  }
+}

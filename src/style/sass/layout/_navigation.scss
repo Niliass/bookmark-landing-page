@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+nav {
+  text-align: center;
+  @include media($md) {
+    @include flex(flex-end, center, null, 15px);
+  }
+  .nav__links {
+    border-block: 1px solid rgb($grayish-blue, 0.6);
+    @include media($md) {
+      @include flex(null, null, null, 15px);
+      border-block: none;
+    }
+    .nav__link {
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 300;
+      padding: 1.4rem;
+      @include trans;
+      &:hover {
+        color: $soft-red;
+      }
+      @include media($md) {
+        padding: 10px;
+        color: $v-d-blue;
+        font: {
+          size: 0.8rem;
+          weight: 400;
+        }
+      }
+    }
+    li:not(:last-child) .nav__link {
+      border-bottom: 1px solid rgb($grayish-blue, 0.6);
+      @include media($md) {
+        border-bottom: none;
+      }
+    }
+  }
+}

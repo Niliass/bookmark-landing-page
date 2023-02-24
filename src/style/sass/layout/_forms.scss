@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.join__form {
+  @include flex(null, null, column, 15px);
+  width: min(500px, 100%);
+  margin: auto;
+  @include trans;
+  @include media($md) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  input[type="text"] {
+    flex: 1;
+    padding-block: 0.6rem;
+    color: $v-d-blue;
+    font-size: 0.9rem;
+    &::placeholder {
+      font-size: 0.8rem;
+      color: rgb($grayish-blue, 0.7);
+      @include trans;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+  @media (max-width: calc($sm - 1px)) {
+    &:has(.invalid) {
+      gap: 2.5rem;
+    }
+  }
+}
