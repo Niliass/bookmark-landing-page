@@ -53,6 +53,15 @@ header {
   }
   .nav__header {
     @include flex(space-between, null, null, null);
+    .svg {
+      &__text,
+      &__circle {
+        fill: $white;
+      }
+      &__mark {
+        fill: $v-d-blue;
+      }
+    }
   }
   .social__media {
     @include flex(center, null, null, 30px);
@@ -66,17 +75,6 @@ header {
       @include trans;
       &:hover {
         color: $soft-red;
-      }
-    }
-  }
-  &:has(.active) {
-    .svg {
-      &__text,
-      &__circle {
-        fill: $white;
-      }
-      &__mark {
-        fill: $v-d-blue;
       }
     }
   }

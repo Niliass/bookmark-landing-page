@@ -706,6 +706,12 @@ header .nav__header {
   display: flex;
   justify-content: space-between;
 }
+header .nav__header .svg__text, header .nav__header .svg__circle {
+  fill: hsl(0deg, 0%, 100%);
+}
+header .nav__header .svg__mark {
+  fill: hsl(229deg, 31%, 21%);
+}
 header .social__media {
   display: flex;
   justify-content: center;
@@ -724,12 +730,6 @@ header .social__media__link {
 }
 header .social__media__link:hover {
   color: hsl(0deg, 94%, 66%);
-}
-header:has(.active) .svg__text, header:has(.active) .svg__circle {
-  fill: hsl(0deg, 0%, 100%);
-}
-header:has(.active) .svg__mark {
-  fill: hsl(229deg, 31%, 21%);
 }
 
 nav {
